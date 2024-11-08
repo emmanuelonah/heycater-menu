@@ -93,7 +93,7 @@ For the code architecture, we use the MVP pattern
 
 - React: testing library: We use React testing library for the UI test and
 - Jest: we use jest for non-UI test
-- Cypress: we use cypress for the e2e test
+- Cypress: we use cypress for the e2e test <p style="color:red;font-size:9px;">I may not get the time to add cypress, but its something i would loved to add if i got time.</p>
 
 ### Documentation
 
