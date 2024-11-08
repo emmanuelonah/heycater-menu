@@ -1,0 +1,42 @@
+[
+  {
+    "id": 1,
+    "name": "Margherita Pizza",
+    "description": "Classic pizza with fresh mozzarella, tomatoes, and basil.",
+    "price": 12.99,
+    "currency": "USD",
+    "image_url": "https://drive.google.com/file/d/1lf7v7CVVl2w49b0OVKiV50Cp_HaZs8zb/view?usp=sharing"
+  },
+  {
+    "id": 2,
+    "name": "Caesar Salad",
+    "description": null,
+    "price": 8.5,
+    "currency": "USD",
+    "image_url": "https://drive.google.com/file/d/1lf7v7CVVl2w49b0OVKiV50Cp_HaZs8zb/view?usp=sharing"
+  },
+  {
+    "id": 3,
+    "name": "Spaghetti Carbonara",
+    "description": "Pasta with eggs, cheese, pancetta, and pepper.",
+    "price": 14.75,
+    "currency": "USD",
+    "image_url": null
+  },
+  {
+    "id": 4,
+    "name": "Grilled Salmon",
+    "description": "Salmon fillet grilled to perfection, served with lemon.",
+    "price": 19.99,
+    "currency": "USD",
+    "image_url": "hhttps://drive.google.com/file/d/1lf7v7CVVl2w49b0OVKiV50Cp_HaZs8zb/view?usp=sharing"
+  },
+  {
+    "id": 5,
+    "name": "Chocolate Lava Cake",
+    "description": null,
+    "price": 6.5,
+    "currency": "USD",
+    "image_url": null
+  }
+]
