@@ -1,3 +1,20 @@
+# == Schema Information
+#
+# Table name: menus
+#
+#  id          :integer          not null, primary key
+#  currency    :string           default("USD")
+#  description :text
+#  image_url   :string
+#  name        :string           not null
+#  price       :decimal(10, 2)   not null
+#  created_at  :datetime         not null
+#  updated_at  :datetime         not null
+#
+# Indexes
+#
+#  index_menus_on_name  (name)
+#
 require 'rails_helper'
 
 RSpec.describe Menu, type: :model do
