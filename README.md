@@ -22,8 +22,42 @@ HeyCater Menu is a catering market place.
 ## [Admin panel ideation](./client/src/__admin__/index.md)
 <img src="./client/src/design-system/assets/icn-admin-ideation.jpeg" alt="Admin panel ideation screenshot"/>
 
-## Things i would have loved to add if i got more time
+## Get started
 
-* Cypress on the FE for e2e
-* Staging hosting for both FE and BE
-* Error Tracking infra for both FE and BE staging
+### Step 1 is to start up the Backend/Server
+
+```bash
+cd server # check into the server project
+
+bundle # to install the gems with reference to the gem lock file
+
+bin/rails server # the server will start up on local port 8080 http://localhost:8080
+```
+
+### Step to is to start the Frontend/Client
+
+```bash
+cd client # check into the client project
+
+yarn # to install packages with reference to package lock file
+
+.env # create a .env file and paste this variables into it. Note i wouldn't document an env secret credentials in a Readme. But for the sake of this task and it not being a secret credentials, then its okay to do so.
+REACT_APP_HEYCARTER_MENU_CLIENT_URL="http://localhost:3000/"
+REACT_APP_HEYCARTER_MENU_SERVER_URL="http://localhost:8080/v1/"
+
+yarn run dev # this will start up the on local port 3000 http://localhost:3000. The app has an admin(http://localhost:3000/admin) and client site(http://localhost:3000)
+```
+
+## Features
+
+### Admin App
+
+<img src="./client/src/design-system/assets/admin/icn-deskop.png" alt=""/>
+<img src="./client/src/design-system/assets/admin/icn-desktop-creation-success.png" alt=""/>
+<img src="./client/src/design-system/assets/admin/icn-mobile-relatime-internet-tracker-offline.png" alt=""/>
+<img src="./client/src/design-system/assets/admin/icn-mobile-relatime-internet-tracker-online.png" alt=""/>
+<img src="./client/src/design-system/assets/admin/icn-mobile-successful-creation.png" alt=""/>
+<img src="./client/src/design-system/assets/admin/icn-mobile-when-unknown-error-ever-occurs.png" alt=""/>
+<img src="./client/src/design-system/assets/admin/icn-modile-validation-error.png" alt=""/>
+
+### End User App
