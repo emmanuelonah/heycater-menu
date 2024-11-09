@@ -12,7 +12,7 @@ HeyCater Menu Server contains the backend code.
 
 ## Environments
 
-[Local env](http://localhost:3000/)
+[Local env](http://localhost:8080/)
 
 [Staging env](this-is-where-i-would-add-the-staging-doman)
 
