@@ -10,6 +10,14 @@
 
 HeyCater Menu Server contains the backend code.
 
+## Environments
+
+[Local env](http://localhost:3000/)
+
+[Staging env](this-is-where-i-would-add-the-staging-doman)
+
+[Production env](this-is-where-i-would-add-the-production-doman)
+
 ## Architecture
 
 We use MVC code architecture.
