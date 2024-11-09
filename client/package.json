@@ -18,7 +18,7 @@
     "perf:audit": "npx lighthouse http://localhost:3000/ --output html --output-path ./performance.html",
     "pre:commit": "yarn run lint",
     "pre:push": "yarn run test:cv && yarn run build",
-    "prepare": "husky install"
+    "prepare": "npx husky install"
   },
   "dependencies": {
     "@tanstack/react-query": "^5.59.20",
