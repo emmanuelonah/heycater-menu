@@ -16,7 +16,7 @@ export const colors = {
   error100: '#FCDEDE',
 
   success400: '#02A543',
-  success300: '#5CC486',
+  success300: '#4EB241',
   success200: '#A2DDB9',
   success100: '#D4EEDE',
 

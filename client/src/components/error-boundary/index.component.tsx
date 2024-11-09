@@ -1,7 +1,7 @@
 import React from 'react';
 
-import { __DEV__ } from 'utils';
-import { Heading2 } from 'components';
+import { __DEV__ } from 'utils/env/index.util';
+import { Heading2 } from 'components/headings/index.component';
 
 import iconJson from './icon-json.png';
 import iconRefresh from './icon-refresh.png';

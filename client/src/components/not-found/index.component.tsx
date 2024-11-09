@@ -1,6 +1,4 @@
-'use client';
-
-import { ROUTES } from 'routes';
+import { ROUTES } from 'routes/util';
 import { Heading3 } from 'components';
 
 import { Wrapper, StyledLink } from './index.styles';

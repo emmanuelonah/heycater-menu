@@ -1,4 +1,4 @@
-import * as React from 'react';
+import React from 'react';
 
 function useVisuallyHidden(style?: React.CSSProperties): { style: React.CSSProperties } {
   return {

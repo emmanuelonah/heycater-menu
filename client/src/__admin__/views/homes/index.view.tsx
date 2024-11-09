@@ -1,3 +1,11 @@
+import { PageWrapper } from '__admin__/layouts';
+
+import { Form } from './form.component';
+
 export function Home() {
-  return <h1>Welcome to Admin Home</h1>;
+  return (
+    <PageWrapper>
+      <Form />
+    </PageWrapper>
+  );
 }

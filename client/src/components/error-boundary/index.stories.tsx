@@ -3,7 +3,8 @@ import React from 'react';
 import { StoryFn, Meta } from '@storybook/react';
 
 import { throwError } from 'utils';
-import { ErrorBoundary } from 'components';
+
+import { ErrorBoundary } from './index.component';
 
 export default {
   title: 'Components/ErrorBoundary',

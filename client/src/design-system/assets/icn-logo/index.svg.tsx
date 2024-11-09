@@ -1,4 +1,4 @@
-import * as React from 'react';
+import React from 'react';
 
 type PrimitiveSvgPropTypes = React.ComponentPropsWithoutRef<'svg'>;
 type IconLogoElement = React.ElementRef<'svg'>;

@@ -2,7 +2,7 @@ import React from 'react';
 
 import { StoryFn, Meta } from '@storybook/react';
 
-import { Heading1, Heading2, Heading3, Heading4 } from 'components';
+import { Heading1, Heading2, Heading3, Heading4 } from './index.component';
 
 export default {
   title: 'Components/Headings',
