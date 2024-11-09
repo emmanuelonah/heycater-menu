@@ -29,3 +29,15 @@ cd bin
 
 rails server
 ```
+
+## Run test
+
+```bash
+bundle exec rspec
+```
+
+## Format file
+
+```bash
+rubocop -a file-path
+```
