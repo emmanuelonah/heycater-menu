@@ -21,3 +21,9 @@ HeyCater Menu is a catering market place.
 
 ## [Admin panel ideation](./client/src/__admin__/index.md)
 <img src="./client/src/design-system/assets/icn-admin-ideation.jpeg" alt="Admin panel ideation screenshot"/>
+
+## Things i would have loved to add if i got more time
+
+* Cypress on the FE for e2e
+* Staging hosting for both FE and BE
+* Error Tracking infra for both FE and BE staging
