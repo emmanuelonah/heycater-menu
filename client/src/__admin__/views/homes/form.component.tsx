@@ -1,10 +1,10 @@
-import { Modal } from 'components';
+import { Modal, ListError } from 'components';
 import { useCreatePresenter } from 'models';
 
 import { Wrapper, TextField, TextArea, Select, Option, Submit } from './form.style';
 
 export function Form() {
-  const { onSubmit, isPending, isSuccess, isError } = useCreatePresenter();
+  const { onSubmit, isPending, isSuccess, isError, error } = useCreatePresenter();
 
   return (
     <>
@@ -29,7 +29,7 @@ export function Form() {
       )}
       {isError && (
         <Modal open type="error">
-          An error occurred. Try again later
+          <ListError errors={error?.errors ?? ['An error occurred. Try again later']} />
         </Modal>
       )}
     </>

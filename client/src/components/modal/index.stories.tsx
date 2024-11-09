@@ -2,7 +2,7 @@ import React from 'react';
 
 import { StoryFn, Meta } from '@storybook/react';
 
-import { Modal } from './index.component';
+import { Modal } from 'components';
 
 export default {
   title: 'Components/Modal',

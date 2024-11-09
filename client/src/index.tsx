@@ -8,7 +8,7 @@ import { QueryClientProvider, QueryClient } from '@tanstack/react-query';
 import { App } from 'app';
 import { startMockServer } from 'mocks';
 import { reportWebVitals } from 'configs';
-import { ErrorBoundary } from 'components';
+import { ErrorBoundary, InternetNotifier } from 'components';
 import { SkipToMainContent, GlobalStyles, theme } from 'design-system';
 
 const queryClient = new QueryClient({ defaultOptions: { queries: { staleTime: 5000 } } });
@@ -20,6 +20,7 @@ startMockServer().finally(() => {
       <ThemeProvider theme={theme}>
         <GlobalStyles theme={theme} />
         <ErrorBoundary>
+          <InternetNotifier />
           <SkipToMainContent href="#main">Skip to main content</SkipToMainContent>
           <QueryClientProvider client={queryClient}>
             <App />

@@ -1,9 +1,21 @@
 import styled from 'styled-components';
 
 const Wrapper = styled.div`
+  right: 0;
+  left: 0;
+  margin: 0 auto;
+
+  /**
+   * @desktopStyle
+   */
+  @media (min-width: ${({ theme }) => theme.typography.pageWidth.desktopStartWidth}) {
+    right: 20px;
+    left: auto;
+    margin: 0 auto;
+  }
+
   position: fixed;
   top: 20px;
-  right: 20px;
   width: 100%;
   max-width: 400px;
   color: ${({ theme }) => theme.colors.white300};

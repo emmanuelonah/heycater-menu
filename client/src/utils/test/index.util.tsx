@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { act } from 'react';
 
 import { ThemeProvider } from 'styled-components';
 import { BrowserRouter } from 'react-router-dom';
@@ -6,8 +6,6 @@ import { render, RenderOptions } from '@testing-library/react';
 import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
 
 import { theme, GlobalStyles } from 'design-system';
-
-export * from '@testing-library/react';
 
 const queryClient = new QueryClient();
 
@@ -31,9 +29,12 @@ function Wrapper(props: { children: React.ReactElement }) {
  * @param {children:React.ReactNode}
  * @returns a transpiled reactNode object
  */
-export function renderWithOptions(ui: React.ReactElement, opts?: RenderOptions) {
+function renderWithOptions(ui: React.ReactElement, opts?: RenderOptions) {
   return render(ui, {
     wrapper: Wrapper as React.JSXElementConstructor<{ children: React.ReactElement }>,
     ...opts,
   });
 }
+
+export * from '@testing-library/react';
+export { act, renderWithOptions };

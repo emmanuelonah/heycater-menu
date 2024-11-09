@@ -17,4 +17,8 @@ declare module 'MenuTypes' {
     description?: string;
     currency?: 'USD' | 'EUR' | 'CRC';
   }
+
+  export interface MenuErrorResponse {
+    errors: string[];
+  }
 }

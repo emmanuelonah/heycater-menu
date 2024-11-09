@@ -1,19 +1,39 @@
-import { useEffect } from 'react';
-
+import { useEffect, useMemo } from 'react';
 import { useBoolean } from 'hooks';
 
-export function useModal(open: boolean) {
-  const [isOpen, { setToFalse }] = useBoolean(open);
+export type ControlledState = {
+  isOpen: boolean;
+  onClose(): void;
+};
+
+export function useModal(open: boolean | (() => boolean), controlledState?: ControlledState) {
+  const [isOpenState, { setToFalse: closeModal }] = useBoolean(open);
+
+  const isControlled = controlledState != undefined;
+  const controlledOpen = controlledState?.isOpen;
+  const onClose = controlledState?.onClose;
+
+  const state = useMemo(
+    () => ({
+      isOpen: isControlled ? controlledOpen : isOpenState,
+      closeModal: isControlled ? onClose : closeModal,
+    }),
+    [isOpenState, controlledOpen, isControlled, onClose, closeModal]
+  );
 
   useEffect(() => {
-    let timeout: NodeJS.Timeout = null!;
+    if (isControlled) return;
 
-    if (isOpen) {
-      timeout = setTimeout(setToFalse, 3000);
+    let timeout: NodeJS.Timeout | null = null;
+
+    if (isOpenState) {
+      timeout = setTimeout(closeModal, 3000);
     }
 
-    return () => clearTimeout(timeout);
-  }, []);
+    return () => {
+      if (timeout) clearTimeout(timeout);
+    };
+  }, [isOpenState, isControlled, closeModal]);
 
-  return { isOpen, setToFalse };
+  return state;
 }

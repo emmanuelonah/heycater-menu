@@ -8,3 +8,4 @@ export * from './error-boundary/index.component';
 export * from './accessible-icon/index.component';
 export * from './visually-hidden/index.component';
 export * from './accessible-icon/index.component';
+export * from './internet-notifier/index.component';

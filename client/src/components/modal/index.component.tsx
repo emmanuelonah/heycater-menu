@@ -11,22 +11,33 @@ type ModalElement = React.ElementRef<'div'>;
 interface ModalPropTypes extends PrimitiveDivPropTypes {
   open: boolean;
   type: 'success' | 'error';
+  controlledState?: {
+    isOpen: boolean;
+    onClose(): void;
+  };
 }
 
 export const Modal = React.forwardRef<ModalElement, ModalPropTypes>(function Modal(
-  { type, children, open, ...restProps },
+  { type, children, open, controlledState, ...restProps },
   forwardedRef
 ) {
-  const { isOpen, setToFalse } = useModal(open);
+  const { isOpen, closeModal } = useModal(open, controlledState);
 
   if (!isOpen) return null;
 
   return (
     <Portal elementType="modal">
-      <Wrapper {...restProps} className={type} ref={forwardedRef}>
+      <Wrapper
+        role="dialog"
+        aria-modal="true"
+        aria-atomic={true}
+        {...restProps}
+        className={type}
+        ref={forwardedRef}
+      >
         <Body>
           <Text>{children}</Text>
-          <Close aria-label="Close" onClick={setToFalse}>
+          <Close aria-label="Close" onClick={closeModal}>
             X
           </Close>
         </Body>
