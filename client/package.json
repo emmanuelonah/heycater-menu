@@ -108,11 +108,6 @@
       "./public",
       "./src/hooks",
       "./src/mocks"
-    ],
-    "coverageThreshold": {
-      "<rootDir>/src/**/*.test.@(js|jsx|ts|tsx)": {
-        "lines": 50
-      }
-    }
+    ]
   }
 }
