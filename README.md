@@ -27,7 +27,7 @@ HeyCater Menu is a catering market place.
 
 ## Get started
 
-### Step 1 is to start up the Backend/Server
+### Step 1: is to start up the Backend/Server
 
 ```bash
 cd server # check into the server project
@@ -37,7 +37,7 @@ bundle # to install the gems with reference to the gem lock file
 bin/rails server # the server will start up on local port 8080 http://localhost:8080
 ```
 
-### Step to is to start the Frontend/Client
+### Step 2: is to start the Frontend/Client
 
 ```bash
 cd client # check into the client project
