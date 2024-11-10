@@ -23,17 +23,4 @@ const Select = styled.select`
 
 const Option = styled.option``;
 
-const Submit = styled.button`
-  background-color: ${({ theme }) => theme.colors.warning100};
-  color: ${({ theme }) => theme.colors.white400};
-  width: 150px;
-  border: none;
-  padding: 0.8rem;
-  margin-top: 2rem;
-
-  &:hover {
-    opacity: 0.7;
-  }
-`;
-
-export { Wrapper, TextField, TextArea, Select, Option, Submit };
+export { Wrapper, TextField, TextArea, Select, Option };

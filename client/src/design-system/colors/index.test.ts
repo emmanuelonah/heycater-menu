@@ -14,7 +14,7 @@ describe('colors', () => {
       success100: '#D4EEDE',
 
       warning200: '#febb02',
-      warning100: '#cd8900',
+      warning100: '#CF5703',
 
       dark500: '#000',
       dark400: '#171719',

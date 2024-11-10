@@ -1,7 +1,7 @@
-import { Modal, ListError } from 'components';
+import { Modal, ListError, PrimaryButton } from 'components';
 import { useCreatePresenter } from 'models';
 
-import { Wrapper, TextField, TextArea, Select, Option, Submit } from './form.style';
+import { Wrapper, TextField, TextArea, Select, Option } from './form.style';
 
 export function Form() {
   const { onSubmit, isPending, isSuccess, isError, error } = useCreatePresenter();
@@ -14,13 +14,14 @@ export function Form() {
         <TextField type="number" name="price" placeholder="Enter price" required />
         <TextField placeholder="Enter image URL" name="imageUrl" />
         <Select name="currency" required>
+          <Option value="">Select currency</Option>
           <Option value="USD">USD</Option>
           <Option value="EUR">EUR</Option>
           <Option value="CRC">CRC</Option>
         </Select>
-        <Submit type="submit" disabled={isPending}>
+        <PrimaryButton type="submit" disabled={isPending}>
           Submit
-        </Submit>
+        </PrimaryButton>
       </Wrapper>
       {isSuccess && (
         <Modal open type="success">
@@ -29,7 +30,7 @@ export function Form() {
       )}
       {isError && (
         <Modal open type="error">
-          <ListError errors={error?.errors ?? ['An error occurred. Try again later']} />
+          <ListError errors={error!} />
         </Modal>
       )}
     </>

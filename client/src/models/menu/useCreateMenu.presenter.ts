@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useMemo } from 'react';
 import { AxiosResponse, AxiosError } from 'axios';
 import { useMutation, useQueryClient } from '@tanstack/react-query';
 
@@ -7,7 +7,9 @@ import { MenuRequest, MenuResponse, MenuErrorResponse } from 'MenuTypes';
 import { MenuModel } from './index.model';
 import { GET_MENU_QUERY_KEY } from './useGetMenu.presenter';
 
-export function useCreatePresenter() {
+const CREATE_MENU_QUERY_KEY = 'create_menu';
+
+function useCreatePresenter() {
   const queryClient = useQueryClient();
 
   const { error, isPending, isSuccess, isError, mutate } = useMutation<
@@ -15,10 +17,12 @@ export function useCreatePresenter() {
     AxiosError<MenuErrorResponse>,
     MenuRequest
   >({
+    mutationKey: [CREATE_MENU_QUERY_KEY],
     mutationFn: MenuModel.createMenu,
     onSuccess: () => {
       queryClient.invalidateQueries({ queryKey: [GET_MENU_QUERY_KEY], exact: true });
     },
+    retry: false,
   });
 
   const onSubmit = (event: React.FormEvent<HTMLFormElement>) => {
@@ -31,7 +35,17 @@ export function useCreatePresenter() {
     event.currentTarget.reset();
   };
 
-  const errorResponse = error?.response?.data;
+  const errors = error?.response?.data?.errors;
 
-  return { isPending, isSuccess, isError, error: errorResponse, onSubmit };
+  const processedError = useMemo(() => {
+    if (!isError) return null;
+
+    if (!errors?.length) return ['An error occurred. Try again later'];
+
+    return errors;
+  }, [errors, isError]);
+
+  return { isPending, isSuccess, isError, error: processedError, onSubmit };
 }
+
+export { CREATE_MENU_QUERY_KEY, useCreatePresenter };

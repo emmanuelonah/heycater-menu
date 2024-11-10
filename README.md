@@ -22,6 +22,9 @@ HeyCater Menu is a catering market place.
 ## [Admin panel ideation](./client/src/__admin__/index.md)
 <img src="./client/src/design-system/assets/icn-admin-ideation.jpeg" alt="Admin panel ideation screenshot"/>
 
+## [Users home page ideation](./client/src/__user__/index.md)
+<img src="./client/src/design-system/assets/icn-user-ideation.jpeg" alt="Users home page ideation screenshot"/>
+
 ## Get started
 
 ### Step 1 is to start up the Backend/Server
@@ -61,3 +64,17 @@ yarn run dev # this will start up the on local port 3000 http://localhost:3000. 
 <img src="./client/src/design-system/assets/admin/icn-modile-validation-error.png" alt=""/>
 
 ### End User App
+
+<img src="./client/src/design-system/assets/user/icn-desktop-all.png" alt=""/>
+<img src="./client/src/design-system/assets/user/icn-mobile-all.png" alt=""/>
+<img src="./client/src/design-system/assets/user/icn-mobile-not-found.png" alt=""/>
+<img src="./client/src/design-system/assets/user/icn-mobile-price-highest.png" alt=""/>
+<img src="./client/src/design-system/assets/user/icn-mobile-search.png" alt=""/>
+
+# What i would have loved to add if i had got more time
+
+* Pagination
+* cypress
+* Add throttling to search
+* Staging free tier Hosting
+* Staging Error tracking infra
