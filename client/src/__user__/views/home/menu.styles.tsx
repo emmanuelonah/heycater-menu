@@ -38,17 +38,8 @@ const Name = styled(Heading2)`
   font-size: ${(props) => props.theme.typography?.bodyText.fontSize};
 `;
 
-const Description = styled.p``;
-
-const PriceWrapper = styled.p`
+const Price = styled.p`
   font-weight: ${(props) => props.theme.typography?.title2.fontWeight};
 `;
 
-const Currency = styled.span`
-  display: inline-block;
-  padding-right: 2px;
-`;
-
-const Price = styled.span``;
-
-export { Card, Image, DetailsWrapper, Name, Description, PriceWrapper, Currency, Price };
+export { Card, Image, DetailsWrapper, Name, Price };
