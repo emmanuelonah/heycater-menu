@@ -65,10 +65,10 @@ yarn run dev # this will start up the on local port 3000 http://localhost:3000. 
 
 ### End User App
 
-<img src="./client/src/design-system/assets/user/icn-desktop-all.png" alt=""/>
+<img src="./client/src/design-system/assets/user/icn-user-desktop.png" alt=""/>
 <img src="./client/src/design-system/assets/user/icn-mobile-all.png" alt=""/>
 <img src="./client/src/design-system/assets/user/icn-mobile-not-found.png" alt=""/>
-<img src="./client/src/design-system/assets/user/icn-mobile-price-highest.png" alt=""/>
+<img src="./client/src/design-system/assets/user/icn-user-mobile.png" alt=""/>
 <img src="./client/src/design-system/assets/user/icn-mobile-search.png" alt=""/>
 
 # What i would have loved to add if i had got more time
