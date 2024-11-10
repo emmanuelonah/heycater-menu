@@ -5,7 +5,7 @@ import { render, screen } from 'utils';
 import { VisuallyHidden } from './index.component';
 
 describe('<VisuallyHidden/>', () => {
-  const textNode = 'Kwara WebAppSacco';
+  const textNode = 'Food Bar Baz';
 
   it('should confirm that "HELLO WORLD" is not visible to the user but present in the DOM', () => {
     render(<VisuallyHidden>{textNode}</VisuallyHidden>);

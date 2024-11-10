@@ -99,8 +99,6 @@ For the code architecture, we use the MVP pattern
 
 - Storybook: we use storybook for component and design system documentation
 
-## Scripts
-
 ## Technologies used
 
 1. [Create React App](https://create-react-app.dev/)
