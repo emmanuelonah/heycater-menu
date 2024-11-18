@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { render, screen, fireEvent, reactAct } from 'utils';
+import { render, screen, fireEvent, act } from 'utils';
 
 import { useLocalStorage } from './useLocalStorage.hook';
 
@@ -56,7 +56,7 @@ describe('useLocalStorage', () => {
   it('should update the component state when localStorage changes', () => {
     render(<TestComponent keyName="testKey" initialValue="initialValue" />);
 
-    reactAct(() => {
+    act(() => {
       localStorage.setItem('testKey', JSON.stringify('externalValue'));
       window.dispatchEvent(new StorageEvent('storage', { key: 'testKey' }));
     });

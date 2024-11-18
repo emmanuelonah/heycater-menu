@@ -2,7 +2,7 @@ import React, { act } from 'react';
 
 import { MemoryRouter } from 'react-router-dom';
 import { ThemeProvider } from 'styled-components';
-import { render, RenderOptions } from '@testing-library/react';
+import * as TestingLibrary from '@testing-library/react';
 import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
 
 import { theme, GlobalStyles } from 'design-system';
@@ -29,15 +29,16 @@ function Wrapper(props: { children: React.ReactElement }) {
  * @param {children:React.ReactNode}
  * @returns a transpiled reactNode object
  */
-function renderWithOptions(ui: React.ReactElement, opts?: RenderOptions) {
-  return render(ui, {
-    wrapper: Wrapper as React.JSXElementConstructor<{ children: React.ReactElement }>,
+
+function renderWithOptions(ui: React.ReactElement, opts?: TestingLibrary.RenderOptions) {
+  return TestingLibrary.render(ui, {
+    wrapper: Wrapper as React.JSXElementConstructor<{ children: React.ReactNode }>,
     ...opts,
   });
 }
 
-const reactAct = act;
+const { act: _act, ...rest } = TestingLibrary;
 
-export * from '@testing-library/react';
+export const { render, fireEvent, screen, waitFor, renderHook, ...otherExports } = rest;
 
-export { reactAct, renderWithOptions };
+export { act, renderWithOptions };

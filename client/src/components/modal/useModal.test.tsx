@@ -1,7 +1,7 @@
 import React from 'react';
 
 import { useBoolean } from 'hooks';
-import { render, screen, reactAct } from 'utils';
+import { render, screen, act } from 'utils';
 
 import { useModal, ControlledState } from './useModal';
 
@@ -47,7 +47,7 @@ describe('useModal', () => {
     render(<TestComponent open />);
     expect(screen.getByTestId('isOpen').textContent).toBe('true');
 
-    reactAct(() => {
+    act(() => {
       jest.advanceTimersByTime(3000);
     });
 
@@ -59,7 +59,7 @@ describe('useModal', () => {
     render(<TestComponent open={false} controlledState={controlledState} />);
     expect(screen.getByTestId('isOpen').textContent).toBe('true');
 
-    reactAct(() => {
+    act(() => {
       jest.advanceTimersByTime(3000);
     });
 
@@ -74,7 +74,7 @@ describe('useModal', () => {
 
     expect(screen.getByTestId('isOpen').textContent).toBe('true');
 
-    reactAct(() => {
+    act(() => {
       screen.getByText('Close Modal').click();
     });
 
@@ -86,7 +86,7 @@ describe('useModal', () => {
 
     expect(screen.getByTestId('isOpen').textContent).toBe('true');
 
-    reactAct(() => {
+    act(() => {
       screen.getByText('Close Modal').click();
     });
 

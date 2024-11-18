@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { render, screen, reactAct } from 'utils';
+import { render, screen, act } from 'utils';
 
 import { Loader } from './index.component';
 
@@ -16,7 +16,7 @@ describe('<Loader/>', () => {
 
     expect(screen.queryByText('Loading...')).not.toBeInTheDocument();
 
-    reactAct(() => {
+    act(() => {
       jest.advanceTimersByTime(2000);
     });
 
@@ -26,7 +26,7 @@ describe('<Loader/>', () => {
   it('should hide the loader and show "Finished loading" after loading is done', () => {
     const { rerender } = render(<Loader isLoading time={2000} loader="Loading..." />);
 
-    reactAct(() => {
+    act(() => {
       jest.advanceTimersByTime(2000);
     });
 
@@ -37,7 +37,7 @@ describe('<Loader/>', () => {
     expect(screen.queryByText('Loading...')).not.toBeInTheDocument();
     expect(screen.getByText('Finished loading')).toBeInTheDocument();
 
-    reactAct(() => {
+    act(() => {
       jest.advanceTimersByTime(2000);
     });
 
