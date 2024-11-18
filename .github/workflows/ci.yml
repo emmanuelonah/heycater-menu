@@ -25,14 +25,18 @@ jobs:
           cd client
           yarn install --ignore-scripts
 
-      # - name: Run ESLint
-      #   run: yarn run lint
-      #   working-directory: ./client
+      - name: Run ESLint
+        run: yarn run lint
+        working-directory: ./client
 
       - name: Run UnitTest
+        env:
+          CI: false
         run: yarn run test:cv
         working-directory: ./client
 
       - name: Run BuildProject
+        env:
+          CI: false
         run: yarn run build
         working-directory: ./client
