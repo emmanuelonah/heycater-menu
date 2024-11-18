@@ -115,8 +115,16 @@
       ".svg.(ts|tsx)$",
       ".stories.(ts|tsx)$",
       "./public",
+      "./build",
+      "./cypress",
       "./src/hooks",
-      "./src/mocks"
+      "./src/mocks",
+      "./src/index.tsx",
+      "./src/app.tsx",
+      ".presenter.(tsx|ts)",
+      "index.route.tsx",
+      "error-infra.config.tsx",
+      "report-web-vitals.config.ts"
     ]
   }
 }

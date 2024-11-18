@@ -1,7 +1,7 @@
 import { Modal, ListError, PrimaryButton } from 'components';
 import { useCreatePresenter } from 'models';
 
-import { Wrapper, TextField, TextArea, Select, Option } from './form.style';
+import { Wrapper, TextField, TextArea, Select, Option } from './form.styles';
 
 export function Form() {
   const { onSubmit, isPending, isSuccess, isError, error } = useCreatePresenter();

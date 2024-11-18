@@ -1,5 +1,5 @@
 import { useFormContext } from './form.component';
-import { SearchField, SearchWidgetContainer } from './form.style';
+import { SearchField, SearchWidgetContainer } from './form.styles';
 
 export function SearchWidget() {
   const { search, onSearch } = useFormContext();
