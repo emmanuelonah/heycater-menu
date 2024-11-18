@@ -1,7 +1,7 @@
 import React, { act } from 'react';
 
+import { MemoryRouter } from 'react-router-dom';
 import { ThemeProvider } from 'styled-components';
-import { BrowserRouter } from 'react-router-dom';
 import { render, RenderOptions } from '@testing-library/react';
 import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
 
@@ -14,12 +14,12 @@ const queryClient = new QueryClient();
  */
 function Wrapper(props: { children: React.ReactElement }) {
   return (
-    <BrowserRouter>
+    <MemoryRouter>
       <ThemeProvider theme={theme}>
         <GlobalStyles theme={theme} />
         <QueryClientProvider client={queryClient}>{props.children}</QueryClientProvider>
       </ThemeProvider>
-    </BrowserRouter>
+    </MemoryRouter>
   );
 }
 
@@ -36,5 +36,8 @@ function renderWithOptions(ui: React.ReactElement, opts?: RenderOptions) {
   });
 }
 
+const reactAct = act;
+
 export * from '@testing-library/react';
-export { act, renderWithOptions };
+
+export { reactAct, renderWithOptions };

@@ -28,6 +28,7 @@ const Container = styled.div`
   display: flex;
   gap: 5px;
   flex-wrap: wrap;
+  margin-top: 1rem;
 `;
 
 export function SkeletonUI() {

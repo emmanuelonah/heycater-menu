@@ -59,6 +59,8 @@ const Select = styled.select`
   border-radius: 20px;
   width: 100%;
   max-width: 250px;
+  background-color: transparent;
+  border: solid 1px ${({ theme }) => theme.colors.warning100};
 `;
 
 const Option = styled.option``;

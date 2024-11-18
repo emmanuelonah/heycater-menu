@@ -7,7 +7,7 @@ import { QueryClientProvider, QueryClient } from '@tanstack/react-query';
 
 import { App } from 'app';
 import { startMockServer } from 'mocks';
-import { reportWebVitals } from 'configs';
+import { reportWebVitals, ErrorTrackerInfra } from 'configs';
 import { ErrorBoundary, InternetNotifier } from 'components';
 import { SkipToMainContent, GlobalStyles, theme } from 'design-system';
 
@@ -19,14 +19,16 @@ startMockServer().finally(() => {
     <React.StrictMode>
       <ThemeProvider theme={theme}>
         <GlobalStyles theme={theme} />
-        <ErrorBoundary>
-          <InternetNotifier />
-          <SkipToMainContent href="#main">Skip to main content</SkipToMainContent>
-          <QueryClientProvider client={queryClient}>
-            <App />
-            <ReactQueryDevtools initialIsOpen={false} />
-          </QueryClientProvider>
-        </ErrorBoundary>
+        <ErrorTrackerInfra>
+          <ErrorBoundary>
+            <InternetNotifier />
+            <SkipToMainContent href="#main">Skip to main content</SkipToMainContent>
+            <QueryClientProvider client={queryClient}>
+              <App />
+              <ReactQueryDevtools initialIsOpen={false} />
+            </QueryClientProvider>
+          </ErrorBoundary>
+        </ErrorTrackerInfra>
       </ThemeProvider>
     </React.StrictMode>
   );
