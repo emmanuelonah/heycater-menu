@@ -1,0 +1,42 @@
+[
+  {
+    "id": 1,
+    "name": "Salad",
+    "description": "Fresh salad with lettuce, tomatoes, cucumbers, and olives.",
+    "price": 12.99,
+    "currency": "USD",
+    "image_url": "https://i.ibb.co/WkZ6FDM/salad.jpg"
+  },
+  {
+    "id": 2,
+    "name": "Spaghetti",
+    "description": "Spaghetti with tomato sauce and meatballs.",
+    "price": 8.5,
+    "currency": "USD",
+    "image_url": "https://i.ibb.co/ygWxm3n/spagh.jpg"
+  },
+  {
+    "id": 3,
+    "name": "Coffee",
+    "description": "Freshly brewed coffee.",
+    "price": 14.75,
+    "currency": "USD",
+    "image_url": "https://i.ibb.co/6Y2RP03/coffee.jpg"
+  },
+  {
+    "id": 4,
+    "name": "Grilled Salmon",
+    "description": "Salmon fillet grilled to perfection, served with lemon.",
+    "price": 19.99,
+    "currency": "USD",
+    "image_url": null
+  },
+  {
+    "id": 5,
+    "name": "Chocolate Lava Cake",
+    "description": null,
+    "price": 6.5,
+    "currency": "USD",
+    "image_url": null
+  }
+]
