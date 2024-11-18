@@ -31,6 +31,7 @@ export default [
     },
     rules: {
       semi: 'off',
+      eqeqeq: 'off',
       'no-empty': 'error',
       'no-undef': 'off',
       'no-redeclare': 'off',
@@ -55,6 +56,7 @@ export default [
       'react-hooks/exhaustive-deps': 'error',
       '@typescript-eslint/no-this-alias': 'off',
       '@typescript-eslint/no-namespace': 'off',
+      'import/no-anonymous-default-export': 'off',
       '@typescript-eslint/no-unused-expressions': 'error',
       '@typescript-eslint/no-unsafe-function-type': 'off',
       '@typescript-eslint/no-unused-vars': [
