@@ -22,7 +22,7 @@
     "perf:audit": "npx lighthouse http://localhost:3000/ --output html --output-path ./performance.html",
     "pre:commit": "yarn run lint",
     "pre:push": "yarn run test:cv && yarn run build",
-    "prepare": "husky install"
+    "prepare": "cd .. && husky install client/.husky"
   },
   "dependencies": {
     "@rollbar/react": "^0.12.0-beta",
