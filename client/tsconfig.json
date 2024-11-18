@@ -17,9 +17,8 @@
     "allowSyntheticDefaultImports": true,
     "forceConsistentCasingInFileNames": true,
     "lib": ["dom", "dom.iterable", "esnext"],
-    "paths": {
-      "@/*": ["./src/*"]
-    }
+    "paths": { "@/*": ["./src/*"] }
   },
-  "include": ["src", "src/components/internet-notifier/..index.stories."]
+  "typeRoots": ["./node_modules/@types", "./@types"],
+  "include": ["src", "@types"]
 }

@@ -41,10 +41,11 @@ export default [
       'no-misleading-character-class': 'off',
       'react-hooks/exhaustive-deps': 'error',
       '@typescript-eslint/no-this-alias': 'off',
+      '@typescript-eslint/no-namespace': 'off',
       '@typescript-eslint/no-unused-vars': 'off',
       '@typescript-eslint/no-unused-expressions': 'off',
       '@typescript-eslint/no-unsafe-function-type': 'off',
     },
-    ignores: ['node_modules/', 'build/', 'coverage/'],
+    ignores: ['./node_modules/', './build/', './coverage/', './cypress'],
   },
 ];
