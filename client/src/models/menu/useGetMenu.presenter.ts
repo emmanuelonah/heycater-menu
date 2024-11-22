@@ -9,8 +9,8 @@ import { MenuModel, SortByType } from './index.model';
 const GET_MENU_QUERY_KEY = 'get_menus';
 
 function useGetMenuPresenter() {
-  const [search, setSearch] = useState<string>(null!);
-  const [sortBy, setSortBy] = useState<SortByType>(null!);
+  const [search, setSearch] = useState<string>('');
+  const [sortBy, setSortBy] = useState<SortByType>('' as SortByType);
 
   const onSearch = useCallback((ev: React.ChangeEvent<HTMLInputElement>) => {
     setSearch(ev.target.value);

@@ -87,13 +87,13 @@ For the code architecture, we use the MVP pattern
 
 - Local CI:  for the local CI we use git hooks/husky
 
-- Remote CI: For the remote CI we use git action. Note: the pipe may fail because it requires me to pay for private mode but when made public, it will pass
+- Remote CI: For the remote CI we use git action
 
 ### Test
 
-- React: testing library: We use React testing library for the UI test and
+- React-test-library: we use React testing library for the UI test
 - Jest: we use jest for non-UI test
-- Cypress: we use cypress for the e2e test <p style="color:red;font-size:9px;">I may not get the time to add cypress, but its something i would loved to add if i got time.</p>
+- Cypress: we use cypress for the e2e test
 
 ### Documentation
 

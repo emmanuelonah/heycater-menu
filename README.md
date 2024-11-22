@@ -74,7 +74,5 @@ yarn run dev # this will start up the on local port 3000 http://localhost:3000. 
 # What i would have loved to add if i had got more time
 
 * Pagination
-* cypress
 * Add throttling to search
 * Staging free tier Hosting
-* Staging Error tracking infra

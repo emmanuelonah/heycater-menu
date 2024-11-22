@@ -3,7 +3,7 @@ import { useMemo } from 'react';
 import { SortByType } from 'models';
 import { createContext } from 'utils';
 
-import { Wrapper } from './form.style';
+import { Wrapper } from './form.styles';
 import { SortWidget } from './sort-widget.component';
 import { SearchWidget } from './search-widget.component';
 

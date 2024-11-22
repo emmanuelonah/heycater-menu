@@ -1,6 +1,6 @@
 import { MenuModel } from 'models';
 
-import { Select, Option } from './form.style';
+import { Select, Option } from './form.styles';
 import { useFormContext } from './form.component';
 
 export function SortWidget() {

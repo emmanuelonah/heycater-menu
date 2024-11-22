@@ -30,7 +30,7 @@ export function Home() {
           loader={<SkeletonUI />}
         >
           {(menus) => (
-            <ul>
+            <ul data-testid="menus">
               {menus?.map((menu) => (
                 <li key={menu.id}>
                   <Menu {...menu} />

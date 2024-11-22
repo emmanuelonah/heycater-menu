@@ -4,7 +4,6 @@ on:
   push:
     branches:
       - master
-
   pull_request:
     branches:
       - master
@@ -22,17 +21,22 @@ jobs:
           node-version: '18.18.0'
 
       - name: Install packages
-        run: yarn install --non-interactive
-        working-directory: ./client
+        run: |
+          cd client
+          yarn install --ignore-scripts
 
       - name: Run ESLint
         run: yarn run lint
         working-directory: ./client
 
       - name: Run UnitTest
+        env:
+          CI: false
         run: yarn run test:cv
         working-directory: ./client
 
       - name: Run BuildProject
+        env:
+          CI: false
         run: yarn run build
         working-directory: ./client

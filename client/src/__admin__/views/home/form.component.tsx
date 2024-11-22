@@ -1,7 +1,7 @@
 import { Modal, ListError, PrimaryButton } from 'components';
 import { useCreatePresenter } from 'models';
 
-import { Wrapper, TextField, TextArea, Select, Option } from './form.style';
+import { Wrapper, TextField, TextArea, Select, Option } from './form.styles';
 
 export function Form() {
   const { onSubmit, isPending, isSuccess, isError, error } = useCreatePresenter();
@@ -13,7 +13,7 @@ export function Form() {
         <TextArea name="description" placeholder="Describe the menu" rows={4} cols={50} />
         <TextField type="number" name="price" placeholder="Enter price" required />
         <TextField placeholder="Enter image URL" name="imageUrl" />
-        <Select name="currency" required>
+        <Select name="currency">
           <Option value="">Select currency</Option>
           <Option value="USD">USD</Option>
           <Option value="EUR">EUR</Option>
@@ -28,9 +28,9 @@ export function Form() {
           Menu created successfully
         </Modal>
       )}
-      {isError && (
+      {isError && error && (
         <Modal open type="error">
-          <ListError errors={error!} />
+          <ListError errors={error} />
         </Modal>
       )}
     </>

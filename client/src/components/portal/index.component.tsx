@@ -6,7 +6,7 @@ import { useForceUpdate } from 'hooks';
 type PortalPropTypes = {
   children: React.ReactNode;
   elementType?: string;
-  container?: React.MutableRefObject<HTMLElement>;
+  container?: React.RefObject<HTMLDivElement> | React.MutableRefObject<HTMLElement>;
 };
 
 export function Portal({ children, container, elementType = 'portal' }: PortalPropTypes) {

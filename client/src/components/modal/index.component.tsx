@@ -30,7 +30,7 @@ export const Modal = React.forwardRef<ModalElement, ModalPropTypes>(function Mod
       <Wrapper
         role="dialog"
         aria-modal="true"
-        aria-atomic={true}
+        aria-atomic
         {...restProps}
         className={type}
         ref={forwardedRef}

@@ -6,6 +6,19 @@ import pluginReactHooks from 'eslint-plugin-react-hooks';
 
 /** @type {import('eslint').Linter.Config[]} */
 export default [
+  {
+    ignores: [
+      '**/dev/*',
+      '**/dist/*',
+      '**/tests/*',
+      '**/build/*',
+      'tsconfig.json',
+      '**/cypress/*',
+      '**/node_modules/*',
+      '**/coverage/*',
+      '**/public/*',
+    ],
+  },
   { settings: { react: { version: 'detect' } } },
   { files: ['**/*.{js,mjs,cjs,ts,jsx,tsx}'] },
   { languageOptions: { globals: globals.browser } },
@@ -18,7 +31,8 @@ export default [
     },
     rules: {
       semi: 'off',
-      'no-empty': 'off',
+      eqeqeq: 'off',
+      'no-empty': 'error',
       'no-undef': 'off',
       'no-redeclare': 'off',
       'valid-typeof': 'off',
@@ -41,10 +55,18 @@ export default [
       'no-misleading-character-class': 'off',
       'react-hooks/exhaustive-deps': 'error',
       '@typescript-eslint/no-this-alias': 'off',
-      '@typescript-eslint/no-unused-vars': 'off',
-      '@typescript-eslint/no-unused-expressions': 'off',
+      '@typescript-eslint/no-namespace': 'off',
+      'import/no-anonymous-default-export': 'off',
+      '@typescript-eslint/no-unused-expressions': 'error',
       '@typescript-eslint/no-unsafe-function-type': 'off',
+      '@typescript-eslint/no-unused-vars': [
+        'error',
+        {
+          argsIgnorePattern: '^_',
+          varsIgnorePattern: '^_',
+          caughtErrorsIgnorePattern: '^_',
+        },
+      ],
     },
-    ignores: ['node_modules/', 'build/', 'coverage/'],
   },
 ];
