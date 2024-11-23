@@ -71,7 +71,7 @@ yarn run dev # this will start up the on local port 3000 http://localhost:3000. 
 <img src="./client/src/design-system/assets/user/icn-user-mobile.png" alt=""/>
 <img src="./client/src/design-system/assets/user/icn-mobile-search.png" alt=""/>
 
-# What i would have loved to add if i had got more time
+# TODO
 
 * Pagination
 * Add throttling to search
