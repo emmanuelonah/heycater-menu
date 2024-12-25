@@ -1,14 +1,14 @@
 <div align="center">
-  <a href="https://github.com/heycater-menu">
-    <img src="./client/src/design-system/assets/icn-logo.png" alt="logo" width="300" />
+  <a href="https://github.com/restaurant-menu">
+    <img src="https://i.ibb.co/WkZ6FDM/salad.jpg" alt="logo" width="300" />
   </a>
 </div>
 
-<h1 align="center">HeyCater Menu</h1>
+<h1 align="center">Restaurant Menu</h1>
 
 # About
 
-HeyCater Menu is a catering market place.
+Restaurant Menu app.
 
 * [Client App 🎨](./client/README.md)
 * [Server App 📦](./server/README.md)
